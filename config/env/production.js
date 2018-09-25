@@ -47,8 +47,13 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     default: {
-      // adapter: 'sails-mysql',
-      // url: 'mysql://user:password@host:port/database',
+      adapter: 'sails-mysql',
+      url: process.env.dbURL,
+      host: process.env.dbHost,
+      port: process.env.dbPort,
+      username: process.env.dbUser,
+      password: process.env.dbPassword,
+      database: process.env.dbUser,
       //--------------------------------------------------------------------------
       //  /\   To avoid checking it in to version control, you might opt to set
       //  ||   sensitive credentials like `url` using an environment variable.
@@ -70,7 +75,7 @@ module.exports = {
       * https://sailsjs.com/config/datastores                                     *
       *                                                                           *
       ****************************************************************************/
-      // ssl: true,
+      ssl: true,
 
     },
 
@@ -148,9 +153,9 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     cors: {
-      // allowOrigins: [
-      //   'https://example.com',
-      // ]
+      allRoutes: true,
+      allowOrigins: ['http://localhost:3000'],
+      allowCredentials: false
     },
 
   },
@@ -223,6 +228,7 @@ module.exports = {
     cookie: {
       // secure: true,
       maxAge: 24 * 60 * 60 * 1000,  // 24 hours
+      secure: true
     },
 
   },
@@ -250,10 +256,10 @@ module.exports = {
     * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
     *                                                                          *
     ***************************************************************************/
-    // onlyAllowOrigins: [
-    //   'https://example.com',
-    //   'https://staging.example.com',
-    // ],
+    onlyAllowOrigins: [
+      //TODO frontend
+      'https://example.com'
+    ],
 
 
     /***************************************************************************
@@ -373,6 +379,9 @@ module.exports = {
   custom: {
     baseUrl: 'https://example.com',
     internalEmailAddress: 'support@example.com',
+    s3Key: process.env.s3Key,
+    s3Secret: process.env.s3Secret,
+    s3Bucket: process.env.s3Bucket
 
     // mailgunDomain: 'mg.example.com',
     // mailgunSecret: 'key-prod_fake_bd32301385130a0bafe030c',
