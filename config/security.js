@@ -30,7 +30,7 @@ module.exports.security = {
 
   cors: {
     allRoutes: true,
-    allowOrigins: ['http://localhost:3000'],
+    allowOrigins: ['http://localhost:3000', 'https://ff-contacts-frontend.herokuapp.com/' ],
     allowCredentials: false
   },
 
