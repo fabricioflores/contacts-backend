@@ -122,7 +122,7 @@ nbproject
 .idea
 .node_history
 dump.rdb
-coverage/*
+coverage
 
 npm-debug.log
 lib-cov
