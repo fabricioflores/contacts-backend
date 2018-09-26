@@ -1,27 +1,42 @@
 # contacts
 
-a [Sails v1](https://sailsjs.com) application
+Sails example project
 
+- Description of the problem and solution.
 
-### Links
+The problem was create a simple contacts app. It should have a list of contacts and a form to create a new one.
 
-+ [Get started](https://sailsjs.com/get-started)
-+ [Sails framework documentation](https://sailsjs.com/documentation)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
+- Reasoning behind your technical choices, including architectural trade-offs you might have made, anything you left out, or what you might do differently if you were to spend additional time on the project.
 
+About the technical choices, in the backend I used sails.js. That was a request from the client. 
+In the frontend I used react.js.
+Maybe in the backend I would use a framework that I used previosly like express or RoR. In the frontend I used react as a personal choice. I didn't work with it previosly, so I wanted to create an app with it.
+I think I could spend more time in the frontend UI.
 
-### Version info
+- Link to other code you're particularly proud of.
 
-This app was originally generated on Mon Sep 24 2018 21:19:55 GMT-0500 (-05) using Sails v1.0.2.
+In frontend, I like this project https://github.com/vilcabamba/batusay-frontend since it has a lot of good practices.
+In backend, I like this one https://github.com/fabricioflores/dumb-express-ssl/blob/master/server.js it is very simple, but was a solution for a big problem, so instead of using nginx and a lot of config, I created a simple proxy with node.
 
-<!-- Internally, Sails used [`sails-generate@1.15.28`](https://github.com/balderdashy/sails-generate/tree/v1.15.28/lib/core-generators/new). -->
+- Link to your resume or public profile.
 
+https://www.linkedin.com/in/fabricio-flores-17344a29/
 
+- Link to the hosted application.
 
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
+Code: https://github.com/fabricioflores/contacts-frontend
+https://github.com/fabricioflores/contacts-backend
 
+App: https://ff-contacts-backend.herokuapp.com/
+https://ff-contacts-frontend.herokuapp.com/
+
+### development
+
+- clone the repo
+- npm install -g sails
+- npm install
+- sails lift
+
+### test
+
+- npm run test
