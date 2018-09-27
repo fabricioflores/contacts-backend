@@ -6,11 +6,12 @@
  */
 
 module.exports = {
-
+  //model attributes
   attributes: {
     name: {type: 'string', required: true},
     image: {type: 'string'},
     phone: {type: 'string', required: true},
+    //validate the format of the email
     email: {type: 'string', required: true, isEmail: true	},
   }
 };
